@@ -1,0 +1,1058 @@
+/* Import FONT */
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	background-color: black;
+	align-items: center;
+	flex-direction: column;
+}
+
+footer {
+  font-family: serif;
+  color: black;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin-top: 100px;
+}
+
+
+/* NAVI STYLE */
+.nav {
+	background-color: white;
+	border-radius: 25px;
+	overflow: hidden;
+	font-family: sans-serif;
+	font-size: 17px;
+	font-weight: 670;
+	margin: 20px;
+	padding: 6 5px;
+}
+
+.nav a {
+	float: left;
+	color: black;
+	padding: 14px 16px;
+	text-decoration: none;
+	text-align: center;
+	transition: all 0.5s;
+}
+
+.nav a:hover {
+	background-color: black;
+	color: white;
+	border-radius: 45px;
+	padding: 14 15px;
+}
+
+.nav a.active {
+	background-color: black;
+	color: white;
+	border-radius: 45px;
+}
+
+.nav .icon {
+	display: none;
+}
+
+.split {
+	float: right;
+}
+
+.nav-item {
+	float: right; /* Change from 'left' to 'right' */
+}
+
+.dropdown 
+		{
+			  float: right;
+		}
+
+	.dropdown-content
+		{
+			  display: none;
+			  position: absolute;
+			  background-color:  #C6D2D2;
+			  max-width: 160px;
+			  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			  z-index: 1;
+			  border-radius: 25px;
+			  right: 39px;
+			  padding-top: 8px;
+			  padding-bottom: 8px;
+		}
+
+	.dropdown-content a 
+		{
+			  color: black;
+			  text-decoration: none;
+			  display: block;
+			  font-family: sans-serif;
+			  text-align: left;
+			  padding-top: 8px;
+			  padding-bottom: 8px;
+		}
+		
+	.dropdown:hover .dropdown-content 
+		{
+			  display: block;
+			  padding: 10 10 10 10px;
+			  width: 160px;
+			  padding-top: 8px;
+			  padding-bottom: 8px;
+		}
+
+	.dropbtn 
+		{
+			  background-color: transparent;
+			  color: black;
+			  font-size: 13px;
+			  font-family: sans-serif;
+			  font-weight: 670;
+			  border: none;
+			  cursor: pointer;
+			  padding: 12px;
+			  margin: 5px;
+			  border-radius: 45px;
+		}
+
+	.dropbtn:hover 
+		{
+			  background-color: black;
+			  color: white;
+			  border-radius: 45px;
+		}
+
+@media screen and (max-width: 700px) {
+	.nav a:not(:first-child) {
+		display: none;
+	}
+	
+	.nav a.icon {
+		float: right;
+		display: block;
+	}
+
+	.nav.responsive .nav-item {
+		display: block;
+		float: none;
+	}
+
+	.nav.responsive .split {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	.split {
+		float: right;
+	}
+}
+
+.nav.responsive {
+	position: relative;
+}
+
+.nav.responsive a.icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.nav.responsive a {
+	float: none;
+	display: block;
+	text-align: left;
+}
+/* END OF NAVI STYLE */
+
+
+/* START OF LOG IN STYLE */
+
+		/* BUTTONS */
+		button {
+		  position: relative;
+		  border-radius: 20px;
+		  border: 1px solid #4bb6b7;
+		  background-color: #4bb6b7;
+		  color: #fff;
+		  font-size: 15px;
+		  font-weight: 700;
+		  margin: 3px;
+		  padding: 12px 80px;
+		  letter-spacing: 1px;
+		  text-transform: capitalize;
+		  transition: 0.3s ease-in-out;
+		  cursor: pointer;
+		}
+
+
+		button:active {
+		  transform: scale(0.95);
+		}
+
+		button:focus {
+		  outline: none;
+		}
+
+		button.ghost {
+		  background-color: rgba(225, 225, 225, 0.2);
+		  border: 2px solid #fff;
+		  color: #fff;
+		  margin-bottom: 55px;
+		  padding: 12px 80px;
+		  
+		}
+
+		button.ghost i{
+		  position: absolute;
+		  opacity: 0;
+		  transition: 0.3s ease-in-out;
+		}
+
+		button.ghost i.slogin{
+		  right: 70px;
+		}
+
+		button.ghost i.mlogin{
+		  left: 70px;
+		}
+
+		button.ghost:hover i.slogin{
+		  right: 40px;
+		  opacity: 1;
+		}
+
+		button.ghost:hover i.mlogin{
+		  left: 40px;
+		  opacity: 1;
+		}
+		
+/* BUTTONS REGISTER */
+.cancelbtn {
+			background-color: #f44336;
+		  }
+
+.cancelbtn,
+.signupbtn 
+		{
+			width: 50%;
+			float: left;
+			border: none;
+		}
+		
+.button-container::after 
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+			
+/* The Close Button (x) */
+.close {
+			position: absolute;
+			right: 35px;
+			top: 15px;
+			font-size: 40px;
+			font-weight: bold;
+			color: #f1f1f1;
+		}
+
+.close:hover,
+.close:focus 
+		{
+			color: #f44336;
+			cursor: pointer;
+		}
+
+.clearfix::after 
+		{
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+/* WORDS */
+h1 {
+  letter-spacing: -1.5px;
+  line-height: 45px;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family:sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  font-family:sans-serif;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+h2.title {
+  font-size: 30px;
+  font-family:sans-serif;
+  line-height: 12px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+  line-height: 12px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 100;
+  font-family:sans-serif;
+  line-height: 17px;
+  letter-spacing: 0.5px;
+  margin: 13px 0;
+  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  font-size: 15px;
+  font-family:sans-serif;
+}
+
+a:hover {
+  color: #4bb6b7;
+}
+
+label {
+	float: left;
+	font-family: sans-serif; 
+	font-weight: 600;
+	}
+
+.SPP{
+			color: #C6D2D2; 
+			font-size: 80px; 
+			font-family: 'Sriracha', sans-serif; 
+			letter-spacing:3px;
+			white-space: nowrap;
+			margin-top: -1;
+			margin-bottom: 10px;
+		}
+		
+.desc
+		{
+			font-size: 24px; 
+			font-family: 'Lora', sans-serif; 
+			line-height: 1;
+			margin-bottom: 10px;
+			letter-spacing:3px;
+			font-weight: 300px;
+		}
+		
+/* FORM */
+form {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+input
+{
+  background-color: #eee;
+  border-radius: 10px;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+		  
+/* CONTAINER - log in*/
+.container {
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  width: 90%;
+  max-width: 768px;
+  min-height: 500px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    height: auto;
+    min-height: 500px;
+    top: initial;
+    left: initial;
+    position: relative;
+    transform: none;
+    margin-bottom: 30px;
+  }
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.mlogin-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.slogin-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .overlay {transform: translateX(50%);}
+
+.container.right-panel-active .overlay-left {transform: translateX(0);}
+
+.container.right-panel-active .overlay-right {  transform: translateX(20%);}
+
+.container.right-panel-active .overlay-container {  transform: translate(-100%);}
+
+.container.right-panel-active .mlogin-container {  transform: translateX(100%);}
+
+.container.right-panel-active .slogin-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+/* OVERLAY - log in*/
+.overlay {
+  background-image: url('C:/Users/QISHUA AQILAH/Pictures/Wallpaper/fishy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(46, 94, 109, 0.4) 40%,
+    rgba(46, 94, 109, 0)
+  );
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {  
+right: 50%;
+transform: translateX(-20%);}
+
+.overlay-right {
+  left: 50%;
+  transform: translateX(0);
+}
+
+/* MODAL - REGISTER */
+/* The Modal (background) */
+.modal {
+			display: none;/* Hidden by default */
+			position: fixed;/* Stay in place */
+			z-index: 1;/* Sit on top */
+			left: 0;
+			top: 0;
+			width: 100%;/* Full width */
+			height: 100%;/* Full height */
+			background-color: rgb(0,0,0); /* Fallback color */
+			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+			padding-top: 10px;
+			z-index: 9;
+		  }
+
+/* Modal Content/Box */
+.modal-content {
+				
+				border-radius: 25px;
+				box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+				width: 900px;
+				height: 530px;
+				padding: 50px;/*size keliling tulisan*/
+				margin: 5% auto 15% auto;/* 5% from the top, 15% from the bottom and centered */
+				width: 80%;/* Could be more or less, depending on screen size */
+			    padding: 0 50px;
+			    height: 100%;
+			    text-align: center;
+			}
+			
+.modal-container
+{
+				background-color: #fff;
+			    border-radius: 25px;
+				padding: 50px;/*size keliling tulisan*/
+				margin: 5% auto 15% auto;/* 5% from the top, 15% from the bottom and centered */
+				width: 80%;/* Could be more or less, depending on screen size */
+				height: 80%;
+			    padding: 0 50px;
+		}
+		  
+/*COLUMN ROW*/		
+/* Create two equal columns that floats next to each other */
+.column {
+			  float: left;
+			  width: 50%;
+			  padding: 10px;
+			  height: 300px; /* Should be removed. Only for demonstration */
+			}
+		
+/* Clear floats after the columns */
+.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+
+/* MEDIA */
+/* Change styles for cancel button and signup button on extra small screens */
+ @media screen and (max-width: 300px) {
+			.cancelbtn,
+			.signupbtn {
+			  width: 100%;
+			}
+		  }
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+		  .column {
+			width: 100%;
+		  }
+		}
+
+@keyframes animatezoom {
+		  from {transform: scale(0)}
+		  to {transform: scale(1)}
+		}
+		
+@keyframes show {
+			  0%,
+			  49.99% {
+				opacity: 0;
+				z-index: 1;
+			  }
+			  50%,
+			  100% {
+				opacity: 1;
+				z-index: 5;}}
+		
+@-webkit-keyframes animatezoom {
+		  from {-webkit-transform: scale(0)}
+		  to {-webkit-transform: scale(1)}
+		}
+/* Add Zoom Animation */
+@keyframes animatezoom {
+			  from {
+				transform: scale(0);
+			  }
+			  to {
+				transform: scale(1);
+			  }
+			}
+.animate {
+			  animation: animatezoom 0.6s;
+			}
+
+/* CSS FOR SLIDESHOW */
+.slideshow-container 
+	{
+		max-width:1500px;
+		min-width:1000px;
+		position: relative;
+		margin: auto;
+		padding: 3 20px;
+	}
+
+.mySlides 
+	{
+		display: none;
+		max-width:1500px;
+		min-width:1000px;
+	    border-radius: 25px;	
+	}
+	
+.mySlides img 
+	{
+		max-width: 100%;
+		height: auto;
+		border-radius: 25px;
+	} 
+	
+/* Fading animation */
+.fade 
+	{
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+@keyframes fade 
+	{
+		from {opacity: .4}
+		to {opacity: 1}
+	}
+
+/* Next & previous buttons */
+.prev, .next 
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+	}
+
+/* Position the "next button" to the right */
+.next 
+	{
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover 
+	{
+		background-color: rgba(0,0,0,0.8);
+	}
+/* The dots/bullets/indicators */
+.dot 
+	{
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+.active, .dot:hover 
+	{
+		background-color: #717171;
+		z-index: -1;
+	}
+/* END OF SLIDESHOW */
+
+/* Start of Description - Home*/
+.column-right 
+{
+		float: right;
+		width: 563px;
+		height: 440px;
+		padding: 20px;
+}
+			
+.column-left 
+{
+		float: left;
+		width: 563px;
+		height: 440px;
+		padding:  3 20px;
+}
+		
+/* Three columns side by side */
+.column-home
+{
+		float: left;
+		width: 24.3%;
+		padding:  3 20px;
+		margin-top: 50px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 1000px) 
+{
+	.column-home 
+		  {
+			width: 100%;
+			display: block;
+		  }
+}
+/* Add some shadows to create a card effect */
+.card-home
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 		
+	border-radius: 25px;
+	background-color: white;
+			
+}
+		
+.card-home img 
+{
+	border-radius: 25px;
+	width: 265px;
+	height: 230px;
+	padding-top:6px;
+	padding-left: 6px;
+}
+
+/* Some left and right padding inside the container */
+.container-home {padding: 0 10px;}
+
+/* Clear floats */
+.container-home::after, .row::after 
+{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* SEARCH - if the search is not working, try form*/
+.input-box {
+		  position: relative;
+		  height: 40px;
+		  max-width: 800px;
+		  background: #fff;
+		  margin: 0 20px;
+		  border-radius: 45px;
+		  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);		  
+		  font-family: "Poppins", sans-serif;
+		}
+		
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.input-box i,
+.input-box .button 
+		{
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		}
+		
+.input-box i {
+		  left: 20px;
+		  font-size: 30px;
+		  color: powderblue;
+		}
+		
+.input-box input {
+		  height: 20px;
+		  width: 100%;
+		  outline: none;
+		  font-size: 15px;
+		  font-weight: 400;
+		  border: none;
+		  background-color: transparent;
+		}
+
+.input-box .button {
+		  right: -30px;
+		  height: 40px;
+		  font-size: 16px;
+		  font-weight: 400;
+		  color: #fff;
+		  border: none;
+		  padding: 12px 30px;
+		  margin: 0 20px;
+		  border-radius: 45px;
+		  background-color:powderblue;
+		  cursor: pointer;
+		}
+
+.input-box .button:active {
+		  transform: translateY(-50%) scale(0.98);
+		}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+		  .input-box {
+			height: 66px;
+			margin: 0 8px;
+		  }
+		  .input-box i {
+			left: 12px;
+			font-size: 25px;
+		  }
+		  .input-box input {
+			padding: 0 112px 0 50px;
+		  }
+		  .input-box .button {
+			right: 12px;
+			font-size: 14px;
+			padding: 8px 18px;
+		  }
+		}
+
+/*PRODUCT*/
+/* This the div for products catalogue and basket*/
+.products-catalogue{
+	float: left;
+	width: 900px;
+	padding: 20px;
+}
+
+.basket-container {
+  float: right;
+  background-color: white;
+  border-radius: 15px;
+  height: 470px;
+  width: 400px;
+  margin-top: 10px;
+  margin-right: 60px;
+  padding: 10px 18px;
+  overflow: auto;
+  position: fixed;
+  
+  bottom: 20px;
+  right: 20px;
+}
+/* This the END OF  div for products catalogue and basket*/
+
+.basket-bottom {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50%;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.basket-bottom p {
+  margin-bottom: 5px;
+}
+
+.basket-bottom button {
+  margin-top: 0px;
+  align-items: center;
+}
+
+.row{
+	margin-top: 50px;
+	float: left;
+	padding:  3px 10px;
+	}
+
+/* Add some shadows to create a card effect */
+.product-container{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 		
+	border-radius: 25px;
+	background-color: white;
+	opacity: 0.85;	
+	margin-top: 10px;
+	height: 300px;
+	width: 250px;
+	padding: 0 10px;
+}
+		
+.product-container:hover {
+  border: 2px solid blue;
+  rotate: 5deg;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.product-container:active {
+  border: 2px solid blue;
+  rotate: 5deg;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.product-container img {
+	border-radius: 25px;
+	width: 240px;
+	height: 230px;
+	padding-top:6px;
+	padding-left: 6px;
+}
+
+.product-container h2 {
+	font-size: 15px;
+	font-style: bold;
+	font-family: lora;	
+}
+
+/* Some left and right padding inside the container */
+.container-product {	
+padding: 0 20px;	}
+
+/* Clear floats */
+.container-product::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.container-product h2{
+	padding-top:10px; 
+	font-size: 15px;
+}
+
+.product-container button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: black;
+  background-color: powderblue;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.product-container button:hover {
+  opacity: 0.7;
+}
+
+
+
+/* Scroll to top button - nanti nak tukar jadi icon*/
+#myBtn {
+  display: none;
+  position: fixed;
+  width: 40px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color:  black;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: powderblue;
+  color:  black;
+}
+
+/** PROFILE CARD **/
+.profile-card {
+	background-color: blue;
+	border-radius: 25px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	width: 300px;
+	height: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.overlay-profile-card {
+	background-color: brown;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-align: center;
+}
+
+.overlay-profile-card h3 {
+	margin-top: 40px;
+}
+
+.overlay-profile-card h2 {
+	margin-top: auto;
+	margin-bottom: 10px;
+}
+
+.overlay-profile-card p {
+	margin: 5px 0;
+}
+
+
+
